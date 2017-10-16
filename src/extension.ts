@@ -12,7 +12,7 @@ const styleTypes = [{
     name: 'SASS',
     ext: 'sass',
 }, {
-    name: 'SASS',
+    name: 'SCSS',
     ext: 'scss',
 }, {
     name: 'CSS',
