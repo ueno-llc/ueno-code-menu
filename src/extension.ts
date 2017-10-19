@@ -6,14 +6,14 @@ import * as path from 'path';
 import * as fs from 'fs';
 
 const styleTypes = [{
+    name: 'SCSS',
+    ext: 'scss',
+}, {
     name: 'LESS',
     ext: 'less',
 }, {
     name: 'SASS',
     ext: 'sass',
-}, {
-    name: 'SCSS',
-    ext: 'scss',
 }, {
     name: 'CSS',
     ext: 'css',
