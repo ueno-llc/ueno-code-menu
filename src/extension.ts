@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     let disposable = vscode.commands.registerCommand('extension.new-component', async (file) => {
 
-        let filePath = file && file.path;
+        let filePath = file && (file.path || file.fsPath);
 
         if (!filePath) {
             // Show file dialog
