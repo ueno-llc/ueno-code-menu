@@ -6,14 +6,14 @@ import * as path from 'path';
 import * as fs from 'fs';
 
 const styleTypes = [{
+    name: 'SCSS',
+    ext: 'scss',
+}, {
     name: 'LESS',
     ext: 'less',
 }, {
     name: 'SASS',
     ext: 'sass',
-}, {
-    name: 'SCSS',
-    ext: 'scss',
 }, {
     name: 'CSS',
     ext: 'css',
@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     let disposable = vscode.commands.registerCommand('extension.new-component', async (file) => {
 
-        let filePath = file && (file.path || file.fsPath);
+        let filePath = file && (file.fsPath || file.path);
 
         if (!filePath) {
             // Show file dialog
