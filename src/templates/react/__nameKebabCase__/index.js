@@ -1,1 +1,1 @@
-export default from './<%= nameCamelCase %>';
+export { default } from './<%= nameCamelCase %>';
