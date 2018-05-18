@@ -40,13 +40,13 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.5.3",
-        "vscode": "^1.1.5",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "@types/mocha": "5.2.0",
+        "@types/node": "10.1.1",
+        "typescript": "2.8.3",
+        "vscode": "1.1.17"
     },
     "dependencies": {
-        "directory-tree": "^2.0.0",
-        "lodash": "^4.17.4"
+        "directory-tree": "2.1.0",
+        "lodash": "4.17.10"
     }
 }
