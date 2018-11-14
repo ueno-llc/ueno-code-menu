@@ -14,7 +14,7 @@ export default class <%= nameCamelCase %> extends <%= componentType %> {
 
   render() {
     return (
-      <div className={s.host}>
+      <div className={s.<%= nameCamelCase %>}>
         {this.props.children}
       </div>
     );
