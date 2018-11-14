@@ -2,7 +2,7 @@
     "name": "ueno-code-menu",
     "displayName": "ueno-code-menu",
     "description": "Ueno tree-view menu items",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "ueno",
     "engines": {
         "vscode": "^1.16.0"
@@ -13,6 +13,10 @@
     "activationEvents": [
         "onCommand:extension.new-component"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ueno-llc/ueno-code-menu"
+    },
     "main": "./out/extension",
     "contributes": {
         "commands": [
@@ -40,10 +44,10 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "@types/mocha": "5.2.0",
-        "@types/node": "10.1.1",
-        "typescript": "2.8.3",
-        "vscode": "1.1.17"
+        "@types/mocha": "5.2.3",
+        "@types/node": "10.3.4",
+        "typescript": "2.9.2",
+        "vscode": "1.1.18"
     },
     "dependencies": {
         "directory-tree": "2.1.0",
