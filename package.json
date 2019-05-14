@@ -2,7 +2,7 @@
   "name": "ueno-code-menu",
   "displayName": "ueno-code-menu",
   "description": "Ueno tree-view menu items",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "ueno",
   "engines": {
     "vscode": "^1.8.0"
