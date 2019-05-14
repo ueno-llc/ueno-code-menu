@@ -13,6 +13,8 @@
 - React and React Native support.
 - TypeScript, SCSS, SASS, LESS, and Stylus extensions.
 
+Download on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ueno.ueno-code-menu)
+
 ## Options
 
 ### `UCM.directory`
