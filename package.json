@@ -1,56 +1,88 @@
 {
-    "name": "ueno-code-menu",
-    "displayName": "ueno-code-menu",
-    "description": "Ueno tree-view menu items",
-    "version": "0.0.4",
-    "publisher": "ueno",
-    "engines": {
-        "vscode": "^1.16.0"
-    },
-    "categories": [
-        "Other"
+  "name": "ueno-code-menu",
+  "displayName": "ueno-code-menu",
+  "description": "Ueno tree-view menu items",
+  "version": "0.0.4",
+  "publisher": "ueno",
+  "engines": {
+    "vscode": "^1.8.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.new-component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ueno-llc/ueno-code-menu"
+  },
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.new-component",
+        "title": "New component"
+      }
     ],
-    "activationEvents": [
-        "onCommand:extension.new-component"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ueno-llc/ueno-code-menu"
-    },
-    "main": "./out/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "extension.new-component",
-                "title": "New component"
-            }
-        ],
-        "menus": {
-            "explorer/context": [
-                {
-                    "when": "explorerResourceIsFolder",
-                    "command": "extension.new-component",
-                    "group": "UenoCodeMenu@1"
-                }
-            ]
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "extension.new-component",
+          "group": "UenoCodeMenu@1"
         }
+      ]
     },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "copy": "rm -rf out/templates; cp -R src/templates out/templates",
-        "compile": "npm run copy; tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "@types/mocha": "5.2.3",
-        "@types/node": "10.3.4",
-        "typescript": "2.9.2",
-        "vscode": "1.1.18"
-    },
-    "dependencies": {
-        "directory-tree": "2.1.0",
-        "lodash": "4.17.10"
+    "configuration": {
+      "type": "object",
+      "title": "ueno-code-menu",
+      "properties": {
+        "UCM.directory": {
+          "type": "string",
+          "default": "src/components",
+          "description": "The default location to create components from the command panel."
+        },
+        "UCM.platform": {
+          "type": "string",
+          "enum": [
+            "react",
+            "react-native"
+          ],
+          "default": "react",
+          "description": "Either your work under `react` or `react-native`."
+        },
+        "UCM.styles": {
+          "type": "string",
+          "enum": [
+            "scss",
+            "less",
+            "sass",
+            "css",
+            "none"
+          ],
+          "default": "scss",
+          "description": "What type of file you need for the styles."
+        }
+      }
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "copy": "rm -rf out/templates; mkdir -p out; cp -R src/templates out/templates",
+    "compile": "npm run copy; tsc -p ./",
+    "watch": "mkdir -p out; cp -R src/templates out/templates; tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "5.2.3",
+    "@types/node": "10.3.4",
+    "typescript": "2.9.2",
+    "vscode": "1.1.34"
+  },
+  "dependencies": {
+    "directory-tree": "2.1.0",
+    "lodash": "4.17.10"
+  }
 }
