@@ -11,4 +11,24 @@
 
 - Adds new component menu in file explorer.
 - React and React Native support.
-- JavaScript, SCSS, SASS, LESS, and Stylus extensions.
+- TypeScript, SCSS, SASS, LESS, and Stylus extensions.
+
+## Options
+
+### `UCM.directory`
+
+Define in which directory components are created when using the extension with the command panel.
+
+Default: `UCM.directory: src/components`
+
+### `UCM.platform`
+
+Define with which stack TypeScript files are created, either `react` or `react-native`.
+
+Default: `UCM.platform: react`
+
+### `UCM.styles`
+
+Define which styles files are used, either `scss`, `less`, `sass`, `css` or `none`.
+
+Default: `UCM.styles: scss`
